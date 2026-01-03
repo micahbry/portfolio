@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Micah Bryant — Software Engineer (C#/.NET · Python)</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Micah Bry — systems-minded Software Engineer. Primary: C#/.NET + Python. Secondary: React/JavaScript. Terminal-style portfolio with projects and contact." />
+  <meta name="theme-color" content="#0e0e0e" />
+
+  <!-- Open Graph / Share -->
+  <meta property="og:title" content="Micah Bry — Software Engineer" />
+  <meta property="og:description" content="Primary: C#/.NET + Python · Secondary: React/JS · CLI + web projects · projects + contact." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0e0e0e;
+      --fg:#e6e6e6;
+      --muted:#9ca3af;
+      --accent:#4ade80;
+      --link:#60a5fa;
+      --danger:#f87171;
+      --border:rgba(255,255,255,.08);
+      --shadow:rgba(0,0,0,.35);
+      --radius:14px;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;padding:3rem 1.25rem 5rem;background:var(--bg);color:var(--fg);font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    main{max-width:900px;margin:0 auto;}
+    .frame{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);box-shadow:0 12px 40px var(--shadow);overflow:hidden;}
+    .titlebar{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;border-bottom:1px solid var(--border);background:rgba(255,255,255,.02);gap:1rem;}
+    .dots{display:inline-flex;gap:.45rem;} .dot{width:10px;height:10px;border-radius:999px;opacity:.85;} .dot.red{background:#ff5f56;} .dot.yellow{background:#ffbd2e;} .dot.green{background:#27c93f;}
+    .hint{color:var(--muted);font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:70%;text-align:right;}
+    .kbd{display:inline-flex;align-items:center;padding:0 .35rem;border:1px solid var(--border);border-bottom-color:rgba(255,255,255,.18);border-radius:6px;font-size:.85em;color:var(--muted);background:rgba(255,255,255,.03);margin:0 .12rem;}
+    .terminal{padding:1.25rem 1.25rem 1rem;background:rgba(0,0,0,.25);min-height:460px;}
+    .log{display:flex;flex-direction:column;gap:.9rem;margin-bottom:1rem;} .line{white-space:pre-wrap;word-break:break-word;} .muted{color:var(--muted);} .accent{color:var(--accent);} .danger{color:var(--danger);} a{color:var(--link);text-decoration:none;} a:hover{text-decoration:underline;}
+    .promptRow{display:flex;align-items:baseline;gap:.5rem;padding:.35rem .5rem;border-radius:10px;border:1px solid transparent;} .promptRow:focus-within{border-color:rgba(96,165,250,.35);background:rgba(96,165,250,.06);} .prompt{color:var(--accent);} .path{color:rgba(230,230,230,.8);} input[type="text"]{flex:1;background:transparent;border:none;outline:none;color:var(--fg);font:inherit;padding:0;min-width:14ch;}
+    .cursor{display:inline-block;width:10px;margin-left:2px;animation:blink 1s steps(2,start) infinite;opacity:.9;} @keyframes blink{to{visibility:hidden;}} @media (prefers-reduced-motion: reduce){.cursor{animation:none;}}
+    footer{padding:1rem 1.25rem;color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);background:rgba(255,255,255,.02);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+    .sr-only{position:absolute !important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  </style>
+</head>
+
+<body>
+<main>
+  <h1 class="sr-only">Micah Bry — Software Engineer</h1>
+
+  <div class="frame">
+    <div class="titlebar">
+      <div class="dots" aria-hidden="true">
+        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+      </div>
+      <div class="hint">Try <span class="kbd">help</span> · history <span class="kbd">↑</span><span class="kbd">↓</span> · skip intro <span class="kbd">Esc</span></div>
+    </div>
+
+    <section class="terminal" aria-label="Terminal portfolio">
+      <div id="log" class="log" role="log" aria-live="polite" aria-relevant="additions text"></div>
+
+      <div class="promptRow" id="promptRow">
+        <span class="prompt" aria-hidden="true">$</span>
+        <span class="path muted" aria-hidden="true">~/micah</span>
+        <input id="cmd" type="text" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Command input" />
+        <span class="cursor" aria-hidden="true">▮</span>
+      </div>
+
+      <noscript>
+        <div class="line" style="margin-top:1rem;">
+          <strong>Micah Bry</strong><br />
+          Software Engineer · Primary: C#/.NET + Python · Secondary: React/JavaScript<br /><br />
+          Systems-minded engineer: clear boundaries, predictable behavior, durable persistence.<br /><br />
+          <a href="https://micahbry.dev">micahbry.dev</a> · <a href="https://github.com/micahbry">GitHub</a> · <a href="https://www.linkedin.com/in/micahbry/">LinkedIn</a> · <a href="mailto:Micahbry@gmail.com">Email</a>
+        </div>
+      </noscript>
+    </section>
+
+    <footer>
+      <span>Built deliberately. No frameworks required.</span>
+      <span class="muted">Try <span class="kbd">projects</span> or <span class="kbd">linkvault</span></span>
+    </footer>
+  </div>
+</main>
+
+<script>
+  // Compatibility-first feature checks
+  const prefersReducedMotion = (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) || false;
+
+  const logEl = document.getElementById("log");
+  const cmdEl = document.getElementById("cmd");
+  const promptRow = document.getElementById("promptRow");
+
+  if (!logEl) console.error('portfolio: missing #log element');
+  if (!cmdEl) console.error('portfolio: missing #cmd element');
+  if (!promptRow) console.error('portfolio: missing #promptRow element');
+
+  const profile = {
+    name: "Micah Bry",
+    title: "Software Engineer",
+    stack: "Primary: C#/.NET · Python | Secondary: React · JavaScript",
+    tagline: "Systems-minded engineer: clear boundaries, predictable behavior, durable persistence — with frontend strength to ship end-to-end.",
+    focus: "Currently strengthening my .NET/Python systems work (tooling, APIs, persistence, reliability) while keeping React/JS sharp for full product delivery.",
+    links: {
+      Site: "https://micahbry.dev",
+      GitHub: "https://github.com/micahbry",
+      LinkedIn: "https://www.linkedin.com/in/micahbry/",
+      Email: "mailto:Micahbry@gmail.com",
+      Resume: "resume.pdf"
+    },
+    projects: [
+      {
+        name: "LinkVault — Bookmark Manager CLI",
+        impact: "Local-first CLI bookmark manager with JSON persistence, URL canonicalization, duplicate prevention, and predictable exit codes for scripting.",
+        tech: "C# · .NET · Spectre.Console.Cli · JSON persistence",
+        link: "https://github.com/micahbry/LinkVault"
+      },
+      {
+        name: "Little Lemon — Front-End Capstone",
+        impact: "React capstone emphasizing component structure, state hygiene, and a cohesive single-page experience.",
+        tech: "React · JavaScript · HTML/CSS",
+        link: "https://github.com/micahbry/LittleLemon-FrontEnd-Capstone"
+      }
+    ],
+    principles: [
+      "Primary: C#/.NET + Python — tooling, APIs, data flow, persistence, reliability",
+      "Architecture: explicit boundaries + dependency direction (testable core)",
+      "Contracts: validation, predictable exit codes, and failure-mode clarity",
+      "Secondary: React/JS — UI implementation, integration, and product delivery"
+    ]
+  };
+
+  const history = [];
+  let historyIndex = -1;
+  let introPlaying = true;
+
+  // Safer escapeHtml (avoid replaceAll for compatibility)
+  function escapeHtml(s){
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  function printLine(text, className = ""){
+    const div = document.createElement("div");
+    div.className = (`line ${className}`).trim();
+    div.innerHTML = text;
+    if (logEl) {
+      logEl.appendChild(div);
+      logEl.scrollTop = logEl.scrollHeight;
+    } else {
+      console.log('[portfolio]', text.replace(/<[^>]+>/g, ''));
+    }
+  }
+
+  function printPromptEcho(command){
+    printLine(`<span class="prompt">$</span> <span class="muted">~/micah</span> ${escapeHtml(command)}`);
+  }
+
+  function cmdHelp(){
+    printLine([
+      `<span class="accent">Commands</span>`,
+      `  <span class="accent">whoami</span>       — quick intro`,
+      `  <span class="accent">focus</span>        — what I'm working on`,
+      `  <span class="accent">projects</span>     — selected work`,
+      `  <span class="accent">linkvault</span>    — CLI demo + exit codes`,
+      `  <span class="accent">principles</span>   — what I optimize for`,
+      `  <span class="accent">links</span>        — site / GitHub / LinkedIn / email`,
+      `  <span class="accent">contact</span>      — copy email to clipboard`,
+      `  <span class="accent">clear</span>        — clear screen`,
+      ``,
+      `<span class="muted">Aliases: <span class="accent">skills</span> → <span class="accent">principles</span></span>`
+    ].join("\n"), "muted");
+  }
+
+  function cmdWhoami(){
+    printLine(`<strong>${escapeHtml(profile.name)}</strong>`);
+    printLine(`${escapeHtml(profile.title)} · <span class="muted">${escapeHtml(profile.stack || '')}</span>`);
+    printLine(`<span class="muted">${escapeHtml(profile.tagline)}</span>`);
+    printLine(`<span class="muted">Type <span class="accent">help</span> for commands.</span>`);
+  }
+
+  function cmdFocus(){
+    printLine(`<span class="accent">Current focus</span>`);
+    printLine(`<span class="muted">${escapeHtml(profile.focus)}</span>`);
+  }
+
+  function cmdProjects(){
+    printLine(`<span class="accent">Selected projects</span>`);
+    for(const p of profile.projects){
+      printLine([
+        `• <strong>${escapeHtml(p.name)}</strong>`,
+        `  <span class="muted">${escapeHtml(p.impact)}</span>`,
+        `  <span class="muted">${escapeHtml(p.tech)}</span>`,
+        `  <a href="${p.link}" target="_blank" rel="noreferrer">repo →</a>`
+      ].join("\n"));
+    }
+    printLine(`<span class="muted">Tip: type <span class="accent">linkvault</span> for a quick CLI transcript, or <span class="accent">principles</span> for how I think.</span>`);
+  }
+
+  function cmdPrinciples(){
+    printLine(`<span class="accent">Principles</span>`);
+    printLine(profile.principles.map(p => `• ${escapeHtml(p)}`).join("\n"), "muted");
+  }
+
+  function cmdLinks(){
+    const { Site, GitHub, LinkedIn } = profile.links;
+    printLine(
+      `<a href="${Site}" target="_blank" rel="noreferrer">micahbry.dev</a> · ` +
+      `<a href="${GitHub}" target="_blank" rel="noreferrer">GitHub</a> · ` +
+      `<a href="${LinkedIn}" target="_blank" rel="noreferrer">LinkedIn</a> · ` +
+      `<a href="./resume.pdf" target="_blank" rel="noreferrer">Resume (PDF)</a> · ` +
+      `<a href="./resume-2026-update.pdf" target="_blank" rel="noreferrer">Updated Resume (PDF)</a>`
+    );
+  }
+
+  async function cmdContact(){
+    const emailHref = profile.links.Email;
+    const email = (emailHref || '').startsWith('mailto:') ? emailHref.slice(7) : emailHref;
+    printLine(`Email: <a href="${emailHref}">${escapeHtml(email)}</a>`);
+    try{
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(email);
+        printLine(`<span class="muted">Copied email to clipboard.</span>`);
+      }
+    }catch(e){
+      printLine(`<span class="muted">Clipboard blocked — click the email link instead.</span>`);
+    }
+  }
+
+  function cmdClear(){ if (logEl) logEl.innerHTML = ''; }
+
+  function cmdLinkVault(){
+    printLine(`<span class="accent">LinkVault — CLI demo</span>`);
+    printLine(`$ linkvault add --name "OpenAI" --url "https://openai.com"\n✔ added (id: <guid>)\n\n$ linkvault add --name "ASP.NET Core Docs" --url "https://learn.microsoft.com/aspnet/core#overview"\n✔ added (id: <guid>)  (canonicalized URL: fragment removed)\n\n$ linkvault list\n┌─────────┬───────────────────┬────────────────────────────────────────────┐\n│ Id      │ Name              │ Url                                        │\n└─────────┴───────────────────┴────────────────────────────────────────────┘\n\n$ linkvault remove --id <guid>\n✔ removed\n\n$ linkvault remove --id <missing-guid>\n✖ not found  (exit: 1)`, "muted");
+    printLine(`<span class="accent">Exit codes</span>`);
+    printLine(`0   success\n1   operational failure (not found, duplicate, etc.)\n2   invalid arguments (validation/parsing)\n130 cancelled (Ctrl+C)`, "muted");
+  }
+
+  function runCommand(raw){
+    const input = String(raw || '').trim();
+    if (!input) return;
+    const cmd = input.toLowerCase();
+    printPromptEcho(raw);
+    switch (cmd){
+      case 'help': cmdHelp(); break;
+      case 'whoami': cmdWhoami(); break;
+      case 'focus':
+      case 'current_focus': cmdFocus(); break;
+      case 'projects': cmdProjects(); break;
+      case 'linkvault': cmdLinkVault(); break;
+      case 'principles': cmdPrinciples(); break;
+      case 'skills': cmdPrinciples(); break;
+      case 'links': cmdLinks(); break;
+      case 'contact': cmdContact(); break;
+      case 'clear': cmdClear(); break;
+      default:
+        printLine(`<span class="danger">command not found:</span> <span class="muted">${escapeHtml(raw)}</span>`);
+        printLine(`<span class="muted">Try <span class="accent">help</span>.</span>`);
+    }
+  }
+
+  function focusInput(){
+    try{ if (cmdEl && typeof cmdEl.focus === 'function') cmdEl.focus({ preventScroll:true }); }
+    catch(e){ try{ cmdEl && cmdEl.focus && cmdEl.focus(); }catch(_){} }
+  }
+
+  async function intro(){
+    introPlaying = true;
+    printLine(`<span class="muted">booting micah@index …</span>`);
+    if(!prefersReducedMotion) await new Promise(r => setTimeout(r, 350));
+    printPromptEcho('whoami');
+    cmdWhoami();
+    introPlaying = false;
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && introPlaying){
+      introPlaying = false;
+      printLine(`<span class="muted">intro skipped. Type <span class="accent">help</span>.</span>`);
+      focusInput();
+    }
+  });
+
+  if (cmdEl) {
+    cmdEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter'){
+        e.preventDefault();
+        const val = cmdEl.value;
+        history.unshift(val);
+        historyIndex = -1;
+        cmdEl.value = '';
+        runCommand(val);
+        return;
+      }
+      if (e.key === 'ArrowUp'){
+        if (history.length === 0) return;
+        e.preventDefault();
+        historyIndex = Math.min(historyIndex + 1, history.length - 1);
+        cmdEl.value = history[historyIndex] || '';
+        queueMicrotask(() => { try{ cmdEl.setSelectionRange(cmdEl.value.length, cmdEl.value.length); }catch(_){} });
+      }
+      if (e.key === 'ArrowDown'){
+        if (history.length === 0) return;
+        e.preventDefault();
+        historyIndex = Math.max(historyIndex - 1, -1);
+        cmdEl.value = historyIndex === -1 ? '' : (history[historyIndex] || '');
+        queueMicrotask(() => { try{ cmdEl.setSelectionRange(cmdEl.value.length, cmdEl.value.length); }catch(_){} });
+      }
+    });
+  }
+
+  if (promptRow) promptRow.addEventListener('mousedown', () => focusInput());
+
+  // Start
+  intro().finally(() => focusInput());
+</script>
+</body>
+</html>
